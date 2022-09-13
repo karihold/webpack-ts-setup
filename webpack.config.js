@@ -45,7 +45,7 @@ module.exports = (env) => ({
       },
       {
         test: /\.(scss|sass)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, { loader: "css-loader", options: { esModule: false } }, "postcss-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
